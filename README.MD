@@ -9,6 +9,11 @@
 
 
 
+## 提高数据库写入速度
+
+[https://blog.csdn.net/m0_38132420/article/details/78964433](https://blog.csdn.net/m0_38132420/article/details/78964433)
+
+[https://juejin.im/post/5a11a3c76fb9a04512388a50](https://juejin.im/post/5a11a3c76fb9a04512388a50)
 
 
 

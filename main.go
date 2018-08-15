@@ -30,19 +30,17 @@ func String(length int) string {
 }
 
 func main() {
-	i := 0
-	db, err := sql.Open("mysql", "root:123456@tcp(127.0.0.1:3306)/unique")
+	db, err := sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/my_db")
 	if err != nil {
 		panic(err)
 	}
 
-	for i < 1000000000 {
-		random_str := String(12)
+	for i := 0; i < 1000000000; i++ {
+		random_str := String(1)
 		_, err = db.Exec("INSERT INTO codes(code) VALUES(?)", random_str)
 		if err != nil {
-			panic(err)
+			continue
 		}
-		i++
 		log.Println(random_str)
 	}
 }
